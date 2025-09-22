@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Άμεση Φροντίδα στο Σπίτι</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+body {
+    margin:0;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+    color:#333;
+    background: url('https://i.ibb.co/6NQhM6n/nursing-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+header, footer {
+    background: rgba(0, 51, 102, 0.9);
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    flex-wrap:wrap;
+}
+header img{height:50px;}
+nav{display:flex;align-items:center;}
+nav a{color:#fff;margin:0 10px;text-decoration:none;font-weight:bold;position:relative;}
+nav a:hover{color:#c01f1f;}
+nav a .submenu{display:none;position:absolute;top:30px;left:0;background:#003366;flex-direction:column;padding:10px;border-radius:6px;}
+nav a:hover .submenu{display:flex;}
+nav a .submenu a{margin:5px 0;color:#fff;text-decoration:none;}
+nav a .submenu a:hover{color:#c01f1f;}
+.menu-toggle{display:none;font-size:28px;cursor:pointer;color:#fff;}
+section{
+    padding:60px 20px;
+    max-width:1100px;
+    margin:auto;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius:10px;
+    margin-bottom:30px;
+}
+h1,h2,h3{color:#003366;}
+h3{color:#c01f1f;}
+ul{margin-left:20px;}
+.btn{display:inline-block;background:#c01f1f;color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none;font-weight:bold;margin-top:15px;}
+.btn:hover{background:#a01a1a;}
+footer{text-align:center;padding:20px;margin-top:30px;}
+.control-panel{
+    position:fixed;
+    top:50px;
+    right:0;
+    width:350px;
+    background:#f0f0f0;
+    border-left:3px solid #c01f1f;
+    padding:15px;
+    height:90vh;
+    overflow:auto;
+    z-index:999;
+    font-family:"Comic Sans MS", cursive, sans-serif;
+}
+.control-panel h3{margin-top:0;color:#003366;}
+.control-panel label{font-weight:bold;}
+.control-panel input,.control-panel textarea{width:100%;margin-bottom:10px;padding:5px;border-radius:5px;border:1px solid #ccc;}
+.control-panel button{background:#c01f1f;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer;font-weight:bold;}
+.control-panel button:hover{background:#a01a1a;}
+@media(max-width:768px){
+  nav{display:none;width:100%;flex-direction:column;}
+  nav.active{display:flex;}
+  nav a{margin:10px 0;}
+  .menu-toggle{display:block;}
+}
+</style>
+</head>
+<body>
+
+<header>
+<img src="https://i.ibb.co/NEW-LOGO.png" alt="Λογότυπο Άμεση Φροντίδα">
+<i class="fas fa-bars menu-toggle" id="menu-toggle"></i>
+<nav id="nav">
+  <a href="#home">Αρχική</a>
+  <a href="#packages">Πακέτα
+    <div class="submenu">
+      <a href="#basic">Βασικό Πακέτο</a>
+      <a href="#advanced">Προχωρημένο Πακέτο</a>
+      <a href="#premium">Premium Πακέτο</a>
+    </div>
+  </a>
+  <a href="#contact">Επικοινωνία</a>
+</nav>
+</header>
+
+<section id="home">
+<h1 id="site-title" contenteditable="true">Άμεση Φροντίδα στο Σπίτι</h1>
+<p id="site-desc" contenteditable="true">Επαγγελματική νοσηλευτική υποστήριξη στον χώρο σας, με ασφάλεια και αξιοπιστία.</p>
+</section>
+
+<section id="packages">
+<h2>Πακέτα Νοσηλείας</h2>
+
+<div id="basic">
+<h3 contenteditable="true">Βασικό Πακέτο</h3>
+<ul contenteditable="true"></ul>
+<p id="basic-free" contenteditable="true">Δωρεάν παροχές: Παρέχονται νεφελοποιητές και συσκευές βρογχοαναρρόφησης.</p>
+</div>
+
+<div id="advanced">
+<h3 contenteditable="true">Προχωρημένο Πακέτο</h3>
+<ul contenteditable="true"></ul>
+<p id="advanced-free" contenteditable="true">Δωρεάν παροχές: Συσκευές και υγειονομικό υλικό διαθέσιμο δωρεάν.</p>
+</div>
+
+<div id="premium">
+<h3 contenteditable="true">Premium Πακέτο</h3>
+<ul contenteditable="true"></ul>
+<p id="premium-free" contenteditable="true">Δωρεάν παροχές: Ολόκληρος εξοπλισμός κατ’ οίκον και επιπλέον υποστήριξη.</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>Επικοινωνία</h2>
+<p id="contact-address" contenteditable="true"><strong>Διεύθυνση:</strong> ΚΑΡΑΟΛΗ ΚΑΙ ΔΗΜΗΤΡΙΟΥ ΤΩΝ ΚΥΠΡΙΩΝ 50</p>
+<p id="contact-phone" contenteditable="true"><strong>Τηλέφωνα:</strong> 6943 795836 • 6938627924</p>
+<form>
+<label for="name">Όνομα:</label><br>
+<input type="text" id="name" name="name" required><br>
+<label for="message">Μήνυμα:</label><br>
+<textarea id="message" name="message" rows="5" required></textarea><br>
+<button type="submit" class="btn">Αποστολή</button>
+</form>
+</section>
+
+<footer>
+<p>© 2025 Άμεση Φροντίδα στο Σπίτι</p>
+</footer>
+
+<!-- Control Panel -->
+<div class="control-panel">
+<h3>Control Panel</h3>
+<label for="title-input">Τίτλος Σελίδας</label>
+<input id="title-input" type="text">
+<label for="desc-input">Εισαγωγικό Κείμενο</label>
+<textarea id="desc-input"></textarea>
+
+<label for="basic-input">Βασικό Πακέτο (ένα ανά γραμμή)</label>
+<textarea id="basic-input"></textarea>
+<label for="basic-free-input">Δωρεάν Παροχές Βασικού</label>
+<textarea id="basic-free-input"></textarea>
+
+<label for="advanced-input">Προχωρημένο Πακέτο (ένα ανά γραμμή)</label>
+<textarea id="advanced-input"></textarea>
+<label for="advanced-free-input">Δωρεάν Παροχές Προχωρημένου</label>
+<textarea id="advanced-free-input"></textarea>
+
+<label for="premium-input">Premium Πακέτο (ένα ανά γραμμή)</label>
+<textarea id="premium-input"></textarea>
+<label for="premium-free-input">Δωρεάν Παροχές Premium</label>
+<textarea id="premium-free-input"></textarea>
+
+<label for="contact-address-input">Διεύθυνση</label>
+<input id="contact-address-input" type="text">
+<label for="contact-phone-input">Τηλέφωνα</label>
+<input id="contact-phone-input" type="text">
+
+<label for="logo-input">Νέο Logo</label>
+<input id="logo-input" type="file" accept="image/*">
+<label for="bg-input">Νέο Background</label>
+<input id="bg-input" type="file" accept="image/*">
+
+<button onclick="updateAll()">Ενημέρωση Όλων</button>
+<button onclick="resetAll()">Επαναφορά Default</button>
+</div>
+
+<script>
+// Menu toggle
+const menuToggle=document.getElementById('menu-toggle');
+const nav=document.getElementById('nav');
+menuToggle.addEventListener('click',()=>nav.classList.toggle('active'));
+
+// Default Data
+const defaultData={
+pageInfo:{title:"Άμεση Φροντίδα στο Σπίτι",desc:"Επαγγελματική νοσηλευτική υποστήριξη στον χώρο σας, με ασφάλεια και αξιοπιστία."},
+packages:{
+basic:["Αλλαγή πάνας","Μπάνιο εβδομαδιαίο με καρότσι","Σίτιση (κανονική ή αλεσμένη)","Φαρμακευτική αγωγή από το στόμα","Κινητοποίηση ασφαλής","Υποκλυσμός όταν απαιτείται"],
+basicFree:"Δωρεάν παροχές: Παρέχονται νεφελοποιητές και συσκευές βρογχοαναρρόφησης.",
+advanced:["Πλήρης περιγεννητική φροντίδα","Προσεκτικό μπάνιο με καρότσι","Σίτιση μέσω Levin ή γαστροστομίας","Φαρμακευτική αγωγή βάσει σχήματος","Φροντίδα κατακλίσεων","Αλλαγή ουροκαθετήρα 1-2 φορές/μήνα","Αιμοληψία & συλλογή ούρων"],
+advancedFree:"Δωρεάν παροχές: Συσκευές και υγειονομικό υλικό διαθέσιμο δωρεάν.",
+premium:["Όλες οι υπηρεσίες προηγούμενων πακέτων","Εξειδικευμένη φροντίδα με ενδοφλέβιες αγωγές","Φροντίδα στομίας","Νεφελοποίηση και αναπνευστική υποστήριξη","24/7 παρακολούθηση"],
+premiumFree:"Δωρεάν παροχές: Ολόκληρος εξοπλισμός κατ’ οίκον και επιπλέον υποστήριξη.",
+contactAddress:"ΚΑΡΑΟΛΗ ΚΑΙ ΔΗΜΗΤΡΙΟΥ ΤΩΝ ΚΥΠΡΙΩΝ 50",
+contactPhone:"6943 795836 • 6938627924"
+}
+};
+
+// Load and Update Functions
+function loadAll(){
+  const saved=JSON.parse(localStorage.getItem('siteData')) || defaultData;
+  document.getElementById('site-title').textContent=saved.pageInfo.title;
+  document.getElementById('site-desc').textContent=saved.pageInfo.desc;
+  document.getElementById('title-input').value=saved.pageInfo.title;
+  document.getElementById('desc-input').value=saved.pageInfo.desc;
+
+  function fillList(id,arr){const ul=document.querySelector(id+' ul'); ul.innerHTML=""; arr.forEach(i=>{const li=document.createElement('li');li.textContent=i;ul.appendChild(li);});}
+  fillList('#basic', saved.packages.basic);
+  fillList('#advanced', saved.packages.advanced);
+  fillList('#premium', saved.packages.premium);
+
+  document.getElementById('basic-free').textContent=saved.packages.basicFree;
+  document.getElementById('advanced-free').textContent=saved.packages.advancedFree;
+  document.getElementById('premium-free').textContent=saved.packages.premiumFree;
+
+  document.getElementById('basic-input').value=saved.packages.basic.join("\n");
+  document.getElementById('basic-free-input').value=saved.packages.basicFree;
+  document.getElementById('advanced-input').value=saved.packages.advanced.join("\n");
+  document.getElementById('advanced-free-input').value=saved.packages.advancedFree;
+  document.getElementById('premium-input').value=saved.packages.premium.join("\n");
+  document.getElementById('premium-free-input').value=saved.packages.premiumFree;
+  document.getElementById('contact-address-input').value=saved.packages.contactAddress;
+  document.getElementById('contact-phone-input').value=saved.packages.contactPhone;
+  document.getElementById('contact-address').textContent=saved.packages.contactAddress;
+  document.getElementById('contact-phone').textContent=saved.packages.contactPhone;
+
+  // Load saved logo & background
+  const savedLogo = localStorage.getItem('siteLogo');
+  const savedBg = localStorage.getItem('siteBg');
+  if(savedLogo) document.querySelector('header img').src = savedLogo;
+  if(savedBg) document.body.style.backgroundImage = `url('${savedBg}')`;
+}
+
+function updateAll(){
+  const newData={
+    pageInfo:{title:document.getElementById('title-input').value,desc:document.getElementById('desc-input').value},
+    packages:{
+      basic:document.getElementById('basic-input').value.split("\n"),
+      basicFree:document.getElementById('basic-free-input').value,
+      advanced:document.getElementById('advanced-input').value.split("\n"),
+      advancedFree:document.getElementById('advanced-free-input').value,
+      premium:document.getElementById('premium-input').value.split("\n"),
+      premiumFree:document.getElementById('premium-free-input').value,
+      contactAddress:document.getElementById('contact-address-input').value,
+      contactPhone:document.getElementById('contact-phone-input').value
+    }
+  };
+  localStorage.setItem('siteData',JSON.stringify(newData));
+  loadAll();
+  alert("Όλα τα δεδομένα ενημερώθηκαν!");
+}
+
+function resetAll(){localStorage.removeItem('siteData');localStorage.removeItem('siteLogo');localStorage.removeItem('siteBg');loadAll();alert("Επαναφορά στα default!");}
+
+// Logo upload
+document.getElementById('logo-input').addEventListener('change', function(event){
+  const file = event.target.files[0];
+  if(file){
+    const reader = new FileReader();
+    reader.onload = function(e){
+      document.querySelector('header img').src = e.target.result;
+      localStorage.setItem('siteLogo', e.target.result);
+    }
+    reader.readAsDataURL(file);
+  }
+});
+
+// Background upload
+document.getElementById('bg-input').addEventListener('change', function(event){
+  const file = event.target.files[0];
+  if(file){
+    const reader = new FileReader();
+    reader.onload = function(e){
+      document.body.style.backgroundImage = `url('${e.target.result}')`;
+      localStorage.setItem('siteBg', e.target.result);
+    }
+    reader.readAsDataURL(file);
+  }
+});
+
+loadAll();
+</script>
+</body>
+</html>
